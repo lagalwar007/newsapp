@@ -1,0 +1,19 @@
+<app-nav></app-nav>
+<app-header></app-header>
+  <!-- Main Content -->
+  
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <ng4-loading-spinner> </ng4-loading-spinner>
+        <app-post *ngFor="let newsItem of newsArticles" [news]="newsItem">
+        </app-post> 
+        <!-- Pager -->
+        <div class="clearfix">
+          <button class="btn btn-primary float-right" (click)="newPost();">Older Posts &rarr;</button>
+         </div>
+      </div>
+    </div>
+  </div>
+  <hr>
+<app-footer></app-footer>
